@@ -294,24 +294,37 @@ footer .wrap{display:block}
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div class="rs-bottom">
-      <div class="rs-copy">
-        <span>© <span id="rs-year">2026</span> Routersync Tecnologia. Todos os direitos reservados.</span>
-        <span>•</span>
-        <div class="rs-dev">
-          <span>Desenvolvido por</span>
-          <a href="https://routersync.com.br" target="_blank" rel="noopener">
-            <img src="images/logo-routersync.png" alt="Routersync Tecnologia">
-          </a>
+<footer style="border-top: 1px solid rgba(255,255,255,.08); padding: 36px 0; color: #8e9bb5; font-size: .87rem; font-family: Inter, system-ui, sans-serif; box-sizing: border-box;">
+  <style>
+    .rs-ft * { box-sizing: border-box; }
+    .rs-ft .rs-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .rs-ft .rs-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; width: 100%; }
+    .rs-ft .rs-copy { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .rs-ft .rs-dev { display: inline-flex; align-items: center; gap: 8px; }
+    .rs-ft .rs-dev img { height: 20px !important; width: auto !important; display: inline-block !important; vertical-align: middle; }
+    .rs-ft a { color: inherit; text-decoration: none; }
+  </style>
+  <div class="rs-ft">
+    <div class="rs-wrap">
+      <div class="rs-bottom">
+        <div class="rs-copy">
+          <span>© <span id="rs-year">2026</span> Routersync Tecnologia. Todos os direitos reservados.</span>
+          <span>•</span>
+          <div class="rs-dev">
+            <span>Desenvolvido por</span>
+            <a href="https://routersync.com.br" target="_blank" rel="noopener">
+              <img src="images/logo-routersync.png" alt="Routersync Tecnologia">
+            </a>
+          </div>
         </div>
+        <span>Paraty – RJ</span>
       </div>
-      <span>Paraty – RJ</span>
     </div>
   </div>
+  <script>
+    document.getElementById('rs-year').textContent = new Date().getFullYear();
+  </script>
 </footer>
-<script>document.getElementById('rs-year').textContent=new Date().getFullYear();</script>
 
 <a class="fab" href="https://wa.me/5524999697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20Tecnologia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico"><use href="#wa"/></svg></a>
 
