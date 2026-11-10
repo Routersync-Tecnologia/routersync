@@ -129,9 +129,13 @@ h1{font-size:clamp(2.4rem,5vw,4.1rem);margin-bottom:24px}
 .info div{display:flex;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line);font-size:.9rem;color:var(--mut)}
 .info b{color:var(--txt);font-weight:500;text-align:right}
 
+/* footer */
 footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mut);font-size:.87rem}
 footer .wrap{display:block}
-.rs-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%;padding-right:70px}
+.rs-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%}
+.rs-copy{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.rs-dev{display:inline-flex;align-items:center;gap:8px}
+.rs-dev img{height:20px!important;width:auto;display:block}
 
 .fab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#04210e;box-shadow:0 10px 28px rgba(37,211,102,.45)}
 .fab .ico{width:30px;height:30px}
@@ -146,6 +150,7 @@ footer .wrap{display:block}
   .menu.open{transform:none}
   .burger{display:block}
   section{padding:76px 0}
+  .rs-bottom{padding-right:0}
 }
 @media(max-width:600px){.cards,.steps,.wgrid{grid-template-columns:1fr}}
 </style>
@@ -295,22 +300,18 @@ footer .wrap{display:block}
     <div class="rs-bottom">
       <div class="rs-copy">
         <span>© <span id="rs-year">2026</span> Routersync Tecnologia. Todos os direitos reservados.</span>
-        
-        <!-- Agrupados para ficarem na mesma linha -->
         <div class="rs-dev">
           <span>Desenvolvido por</span>
-          <a href="https://routersync.com.br" target="_blank" rel="noopener" class="logo">
-            <img src="images/logo-routersync.png" alt="Routersync Tecnologia" height="26">
+          <a href="https://routersync.com.br" target="_blank" rel="noopener">
+            <img src="images/logo-routersync.png" alt="Routersync Tecnologia">
           </a>
         </div>
-        
       </div>
       <span>Paraty – RJ</span>
     </div>
   </div>
 </footer>
 <script>document.getElementById('rs-year').textContent=new Date().getFullYear();</script>
- 
 
 <a class="fab" href="https://wa.me/5524999697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20Tecnologia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico"><use href="#wa"/></svg></a>
 
