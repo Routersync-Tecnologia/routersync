@@ -2,10 +2,10 @@
 
 VERSION=1
 MINOR=0
-PATCH=
-EXTRAVERSION="-rc1"
+PATCH=0
+EXTRAVERSION=""
 
-NOTES="Versão inicial; adicionado favicon"
+NOTES="Versão inicial Completa"
 BRANCH="main"
 
 set -e

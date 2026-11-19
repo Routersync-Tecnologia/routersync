@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Routersync Tecnologia | Desenvolvimento Web, Infraestrutura e Consultoria</title>
-<meta name="description" content="Routersync Tecnologia: criação de sites, lojas virtuais, sistemas web, hospedagem, infraestrutura em nuvem e consultoria em telecomunicações. Paraty - RJ.">
+<title>Routersync Tecnologia | Sites, Sistemas Web e Infraestrutura em Paraty</title>
+<meta name="description" content="Routersync Tecnologia: sites institucionais e landing pages, sistemas web sob medida, integrações e APIs, infraestrutura em nuvem com servidores Linux e consultoria em telecom. Paraty - RJ.">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
@@ -14,9 +14,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#060a13; --bg2:#0b1220; --card:#0f1829; --line:rgba(255,255,255,.08);
-  --txt:#e9eef8; --mut:#8e9bb5; --a:#3b82f6; --b:#22d3c5; --wa:#25d366;
+  --bg:#ffffff; --bg2:#f5f8fc; --card:#ffffff; --line:#e3e9f2;
+  --txt:#0b1220; --mut:#5a6a85; --a:#2563eb; --b:#0a8f8a; --wa:#25d366;
   --grad:linear-gradient(135deg,#3b82f6,#22d3c5);
+  --gtxt:linear-gradient(135deg,#2563eb,#0d9488);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -24,97 +25,94 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt
 h1,h2,h3,h4{font-family:'Space Grotesk',Inter,sans-serif;line-height:1.12;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-section{padding:104px 0;position:relative}
+section{padding:100px 0;position:relative}
 .tag{display:inline-block;font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-bottom:16px}
-h2{font-size:clamp(2rem,3.8vw,2.9rem);margin-bottom:18px}
+h2{font-size:clamp(2rem,3.8vw,2.8rem);margin-bottom:18px}
 .sub{color:var(--mut);max-width:600px;font-size:1.05rem}
-.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad{background:var(--gtxt);-webkit-background-clip:text;background-clip:text;color:transparent}
 .ico{width:20px;height:20px;fill:currentColor;flex:none}
 
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;padding:16px 0}
-header.sc{background:rgba(6,10,19,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:10px 0}
+header.sc{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:10px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:1.2rem}
+.logo{display:flex;align-items:center}
 .logo img{height:42px;width:auto;display:block}
-.logo .mk{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;color:#04101f;font-weight:700}
-.menu{display:flex;gap:32px;align-items:center}
+.menu{display:flex;gap:30px;align-items:center}
 .menu a:not(.btn){color:var(--mut);font-size:.92rem;font-weight:500;transition:.2s}
-.menu a:not(.btn):hover{color:#fff}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:10px;font-weight:600;font-size:.95rem;transition:.25s;cursor:pointer;border:0}
+.menu a:not(.btn):hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:12px;font-weight:600;font-size:.95rem;transition:.25s;cursor:pointer;border:0}
 .btn-wa{background:var(--wa);color:#04210e}
-.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,.35)}
-.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt)}
-.btn-ghost:hover{border-color:var(--a);background:rgba(59,130,246,.1)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,211,102,.35)}
+.btn-ghost{border:1px solid var(--line);background:#fff;color:var(--txt)}
+.btn-ghost:hover{border-color:var(--a);color:var(--a)}
 .btn-sm{padding:10px 18px;font-size:.88rem}
-.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+.burger{display:none;background:none;border:0;color:var(--txt);font-size:1.6rem;cursor:pointer}
 
 /* hero */
-.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
-.hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--a);filter:blur(130px);opacity:.28;top:-160px;right:-120px}
-.hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--b);filter:blur(130px);opacity:.14;bottom:-140px;left:-120px}
-.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse at center,#000 15%,transparent 70%);mask-image:radial-gradient(ellipse at center,#000 15%,transparent 70%)}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.04);font-size:.82rem;color:var(--mut);margin-bottom:26px}
-.pill i{width:7px;height:7px;border-radius:50%;background:var(--b);box-shadow:0 0 10px var(--b)}
-h1{font-size:clamp(2.4rem,5vw,4.1rem);margin-bottom:24px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden;background:linear-gradient(180deg,#f3f7ff 0%,#fff 100%)}
+.hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#3b82f6;filter:blur(140px);opacity:.16;top:-160px;right:-120px}
+.hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:#22d3c5;filter:blur(140px);opacity:.14;bottom:-160px;left:-120px}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:60px 60px;opacity:.55;-webkit-mask-image:radial-gradient(ellipse at center,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at center,#000 10%,transparent 70%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:.82rem;color:var(--mut);margin-bottom:26px}
+.pill i{width:7px;height:7px;border-radius:50%;background:#22d3c5;box-shadow:0 0 0 4px rgba(34,211,197,.2)}
+h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:24px}
 .lead{color:var(--mut);font-size:1.12rem;max-width:520px;margin-bottom:36px}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
-.meta{display:flex;gap:30px;margin-top:50px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--line);max-width:520px}
+.meta{display:flex;gap:30px;margin-top:48px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line);max-width:520px}
 .meta div{font-size:.86rem;color:var(--mut)}
 .meta b{display:block;color:var(--txt);font-family:'Space Grotesk';font-size:1rem;margin-bottom:2px}
 
-/* browser mockup */
-.browser{background:linear-gradient(160deg,#101a2d,#0a111f);border:1px solid var(--line);border-radius:18px;box-shadow:0 40px 90px rgba(0,0,0,.55);overflow:hidden}
-.bar{display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid var(--line)}
-.bar i{width:10px;height:10px;border-radius:50%;background:#ffffff22}
-.bar span{margin-left:12px;flex:1;background:rgba(255,255,255,.05);border-radius:7px;padding:4px 12px;font-size:.74rem;color:var(--mut)}
-.bbody{padding:26px}
-.sk{height:11px;border-radius:6px;background:rgba(255,255,255,.08);margin-bottom:10px}
-.sk.t{height:20px;width:62%;background:var(--grad);opacity:.9;margin-bottom:16px}
-.sk.s{width:80%}.sk.m{width:55%}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
-.tiles div{height:70px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
-.tiles div:first-child{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.35)}
-.stat{display:flex;justify-content:space-between;font-size:.8rem;color:var(--mut);padding:11px 0;border-top:1px solid var(--line)}
-.stat em{font-style:normal;color:var(--b);font-weight:600}
+/* promo */
+.promo{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px;box-shadow:0 30px 70px rgba(37,99,235,.12);overflow:hidden}
+.promo::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--grad)}
+.badge{display:inline-block;background:#e8f1ff;color:#1d4ed8;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:99px}
+.promo h3{font-size:1.45rem;margin-top:16px}
+.price{font-family:'Space Grotesk';font-weight:700;font-size:3.4rem;line-height:1;letter-spacing:-.03em;margin:18px 0 20px;color:var(--txt)}
+.price small{font-size:1.1rem;font-weight:600;margin-right:4px;vertical-align:top;line-height:2.6;color:var(--mut)}
+.price span{font-size:1rem;font-weight:500;color:var(--mut);letter-spacing:0;margin-left:2px}
+.plist{list-style:none;display:grid;gap:12px;margin-bottom:26px;padding-top:20px;border-top:1px solid var(--line)}
+.plist li{display:flex;gap:12px;font-size:.96rem;color:var(--txt)}
+.plist li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;background:#e6faf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.7 2.7L14 7.8' fill='none' stroke='%230a8f8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat;margin-top:2px}
+.promo .btn{width:100%;padding:16px}
 
 /* services */
 .svc{background:var(--bg2)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:54px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;transition:.3s}
-.card:hover{transform:translateY(-5px);border-color:rgba(59,130,246,.5);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-.num{font-family:'Space Grotesk';font-size:.85rem;font-weight:600;color:var(--b);letter-spacing:.1em;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;transition:.3s}
+.card:hover{transform:translateY(-4px);border-color:#bcd0f5;box-shadow:0 18px 40px rgba(37,99,235,.1)}
+.num{font-family:'Space Grotesk';font-size:.85rem;font-weight:600;color:var(--b);letter-spacing:.1em;margin-bottom:20px;display:flex;align-items:center;gap:12px}
 .num::after{content:"";height:1px;flex:1;background:var(--line)}
-.card h3{font-size:1.2rem;margin-bottom:10px}
+.card h3{font-size:1.18rem;margin-bottom:10px}
 .card p{color:var(--mut);font-size:.94rem}
 
 /* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:54px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px}
 .st{padding-top:22px;border-top:2px solid var(--line);position:relative}
 .st::before{content:"";position:absolute;top:-2px;left:0;width:44px;height:2px;background:var(--grad)}
 .st b{font-family:'Space Grotesk';color:var(--b);font-size:.85rem;letter-spacing:.1em}
 .st h4{font-size:1.1rem;margin:8px 0}
 .st p{color:var(--mut);font-size:.92rem}
 
-/* telecom */
-.tel{background:var(--bg2)}
-.tel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+/* split sections */
+.infra{background:var(--bg2)}
+.split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .list{list-style:none;margin:28px 0 34px;display:grid;gap:15px}
 .list li{display:flex;gap:14px;color:var(--mut);font-size:.96rem}
-.list li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--b);margin-top:10px}
+.list li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#22d3c5;margin-top:10px}
 .list b{color:var(--txt);font-weight:600}
-.tbox{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px;position:relative;overflow:hidden}
-.tbox::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--a);filter:blur(110px);opacity:.22;right:-90px;top:-90px}
-.tbox>*{position:relative;z-index:1}
+.tbox{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px;box-shadow:0 20px 50px rgba(15,24,41,.06)}
 .tbox h3{font-size:1.3rem;margin-bottom:6px}
-.tbox>p{color:var(--mut);font-size:.92rem;margin-bottom:22px}
-.chk{display:flex;justify-content:space-between;padding:15px 0;border-top:1px solid var(--line);font-size:.93rem}
-.chk span:last-child{color:var(--b);font-weight:600;font-size:.82rem}
+.tbox>p{color:var(--mut);font-size:.92rem;margin-bottom:18px}
+.chk{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:.94rem}
+.chk b{font-weight:600}
+.chk span{color:var(--mut);font-size:.86rem;text-align:right}
+.tel .chk span:last-child{color:var(--b);font-weight:600}
 
 /* why */
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px}
-.w{padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.w{padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--bg2)}
 .w h3{font-size:1.05rem;margin-bottom:8px}
 .w p{color:var(--mut);font-size:.9rem}
 
@@ -123,23 +121,15 @@ h1{font-size:clamp(2.4rem,5vw,4.1rem);margin-bottom:24px}
 .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .next{list-style:none;margin-top:30px;display:grid;gap:18px;counter-reset:n}
 .next li{display:flex;gap:16px;color:var(--mut);font-size:.95rem;counter-increment:n}
-.next li::before{content:counter(n);flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:.8rem;color:var(--b);font-weight:600}
+.next li::before{content:counter(n);flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;font-size:.8rem;color:var(--b);font-weight:600}
 .next b{display:block;color:var(--txt);font-weight:600}
-.ccard{background:linear-gradient(160deg,rgba(59,130,246,.16),rgba(34,211,197,.07));border:1px solid var(--line);border-radius:24px;padding:40px}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:0 24px 60px rgba(37,99,235,.1)}
 .ccard h3{font-size:1.5rem;margin-bottom:8px}
 .ccard>p{color:var(--mut);margin-bottom:26px;font-size:.95rem}
-.ccard .btn{width:100%;justify-content:center;padding:17px}
+.ccard .btn{width:100%;padding:17px}
 .info{margin-top:28px;display:grid;gap:14px}
 .info div{display:flex;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line);font-size:.9rem;color:var(--mut)}
 .info b{color:var(--txt);font-weight:500;text-align:right}
-
-/* footer */
-footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mut);font-size:.87rem}
-footer .wrap{display:block}
-.rs-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%}
-.rs-copy{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.rs-dev{display:inline-flex;align-items:center;gap:8px}
-.rs-dev img{height:20px!important;width:auto!important;display:inline-block!important;vertical-align:middle}
 
 .fab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#04210e;box-shadow:0 10px 28px rgba(37,211,102,.45)}
 .fab .ico{width:30px;height:30px}
@@ -147,15 +137,15 @@ footer .wrap{display:block}
 .rv.in{opacity:1;transform:none}
 
 @media(max-width:940px){
-  .hero .wrap,.tel .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero .wrap,.split .wrap,.contact .wrap{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr 1fr}
   .steps,.wgrid{grid-template-columns:1fr 1fr}
-  .menu{position:fixed;inset:64px 0 auto 0;background:rgba(6,10,19,.98);flex-direction:column;padding:28px;gap:22px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s}
+  .menu{position:fixed;inset:64px 0 auto 0;background:rgba(255,255,255,.98);flex-direction:column;padding:28px;gap:22px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s}
   .menu.open{transform:none}
   .burger{display:block}
   section{padding:76px 0}
 }
-@media(max-width:600px){.cards,.steps,.wgrid{grid-template-columns:1fr}}
+@media(max-width:600px){.cards,.steps,.wgrid{grid-template-columns:1fr}.promo{padding:28px}}
 </style>
 </head>
 <body>
@@ -164,9 +154,10 @@ footer .wrap{display:block}
 
 <header id="hd">
   <div class="wrap nav">
-    <a href="#inicio" class="logo"><img src="images/logo-routersync.png" alt="Routersync Tecnologia"></a>
+    <a href="#inicio" class="logo"><img src="images/logo-routersync-fundo-claro.png" alt="Routersync Tecnologia"></a>
     <nav class="menu" id="menu">
       <a href="#servicos">Serviços</a>
+      <a href="#promo">Promoção</a>
       <a href="#processo">Como trabalhamos</a>
       <a href="#telecom">Consultoria</a>
       <a href="#contato">Contato</a>
@@ -182,27 +173,29 @@ footer .wrap{display:block}
     <div>
       <span class="pill"><i></i> Tecnologia para empresas em todo o Brasil</span>
       <h1>Sua presença digital, <span class="grad">construída para performar.</span></h1>
-      <p class="lead">Desenvolvemos sistemas web com hospedagem e infraestrutura seguras. Do projeto ao ar, com acompanhamento de perto.</p>
+      <p class="lead">Sites rápidos, sistemas web sob medida, integrações e infraestrutura em nuvem. Do projeto ao ar, com acompanhamento de perto.</p>
       <div class="cta">
         <a class="btn btn-wa" href="https://wa.me/5524999697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Solicitar orçamento</a>
         <a class="btn btn-ghost" href="#servicos">Conhecer serviços</a>
       </div>
       <div class="meta">
         <div><b>Sites e sistemas</b>Sob medida</div>
-        <div><b>Infraestrutura</b>Segura e escalável</div>
+        <div><b>Nuvem e Linux</b>Infraestrutura segura</div>
         <div><b>Consultoria</b>Telecom e TI</div>
       </div>
     </div>
-    <div class="browser rv">
-      <div class="bar"><i></i><i></i><i></i><span>seudominio.com.br</span></div>
-      <div class="bbody">
-        <div class="sk t"></div><div class="sk s"></div><div class="sk m"></div>
-        <div class="tiles"><div></div><div></div><div></div></div>
-        <div class="stat"><span>Certificado SSL</span><em>Ativo</em></div>
-        <div class="stat"><span>Desempenho</span><em>Otimizado</em></div>
-        <div class="stat"><span>Backup automático</span><em>Em dia</em></div>
-      </div>
-    </div>
+    <aside class="promo rv" id="promo">
+      <span class="badge">Promoção</span>
+      <h3>Seu site no ar, com domínio incluso</h3>
+      <div class="price"><small>R$</small>499,90<span>/ano</span></div>
+      <ul class="plist">
+        <li>Criação do site institucional ou landing page</li>
+        <li>Hospedagem por 1 ano</li>
+        <li>Domínio incluso</li>
+        <li>Logo da sua empresa aplicado</li>
+      </ul>
+      <a class="btn btn-wa" href="https://wa.me/5524999697837?text=Ol%C3%A1%21%20Quero%20a%20promo%C3%A7%C3%A3o%20do%20site%20por%20R%24%20499%2C90%20ao%20ano." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Quero meu site</a>
+    </aside>
   </div>
 </section>
 
@@ -212,12 +205,12 @@ footer .wrap{display:block}
     <h2>Soluções completas para <span class="grad">o seu negócio online</span></h2>
     <p class="sub">Cuidamos de toda a base técnica da sua presença digital, para você focar no que faz melhor.</p>
     <div class="cards">
-      <div class="card rv"><div class="num">01</div><h3>Sites institucionais</h3><p>Sites rápidos, modernos e responsivos, otimizados para o Google e pensados para gerar contatos.</p></div>
-      <div class="card rv"><div class="num">02</div><h3>Lojas virtuais</h3><p>E-commerce completo com catálogo, pagamentos e frete integrados, pronto para vender.</p></div>
-      <div class="card rv"><div class="num">03</div><h3>Sistemas web</h3><p>Painéis, plataformas e automações sob medida para organizar e agilizar a sua operação.</p></div>
-      <div class="card rv"><div class="num">04</div><h3>Hospedagem e e-mail</h3><p>Hospedagem profissional, domínio, certificado SSL e e-mails corporativos com a sua marca.</p></div>
-      <div class="card rv"><div class="num">05</div><h3>Infraestrutura e nuvem</h3><p>Servidores, deploy, monitoramento, segurança e backups para manter tudo no ar com estabilidade.</p></div>
-      <div class="card rv"><div class="num">06</div><h3>Manutenção e suporte</h3><p>Atualizações, correções e evolução contínua do seu site ou sistema, com suporte direto.</p></div>
+      <div class="card rv"><div class="num">01</div><h3>Sites institucionais e landing pages</h3><p>Páginas rápidas, responsivas e focadas em conversão, para negócios locais ou campanhas específicas.</p></div>
+      <div class="card rv"><div class="num">02</div><h3>Sistemas e aplicações web sob medida</h3><p>Ferramentas internas, portais de clientes e painéis de gestão adaptados aos processos de cada empresa.</p></div>
+      <div class="card rv"><div class="num">03</div><h3>Integrações de sistemas e APIs</h3><p>Conexão entre ERPs, CRMs, meios de pagamento e as plataformas que você já utiliza.</p></div>
+      <div class="card rv"><div class="num">04</div><h3>Manutenção, otimização e SEO técnico</h3><p>Melhoria de velocidade, correção de bugs, atualizações de segurança e posicionamento nos buscadores.</p></div>
+      <div class="card rv"><div class="num">05</div><h3>Nuvem, infraestrutura e servidores Linux</h3><p>Sistemas em nuvem, servidores Linux e infraestrutura configurados para ficar no ar com estabilidade.</p></div>
+      <div class="card rv"><div class="num">06</div><h3>Consultoria em telecom</h3><p>Orientação técnica para planejar a conectividade e reduzir custos com links e operadoras.</p></div>
     </div>
   </div>
 </section>
@@ -225,17 +218,35 @@ footer .wrap{display:block}
 <section id="processo">
   <div class="wrap">
     <span class="tag">Como trabalhamos</span>
-    <h2>Um processo <span class="grad">claro e objetivo</span></h2>
+    <h2>Seu site no ar, <span class="grad">sem complicação</span></h2>
+    <p class="sub">Você não precisa pensar muito: nós montamos a primeira versão, já com o logo da sua empresa. Depois, é só pedir as alterações.</p>
     <div class="steps">
-      <div class="st rv"><b>01</b><h4>Entendimento</h4><p>Conversamos para entender o seu negócio, objetivos e prioridades.</p></div>
-      <div class="st rv"><b>02</b><h4>Proposta</h4><p>Escopo, prazo e investimento definidos de forma transparente.</p></div>
-      <div class="st rv"><b>03</b><h4>Desenvolvimento</h4><p>Construção com validações ao longo do caminho e entrega no ar.</p></div>
-      <div class="st rv"><b>04</b><h4>Suporte contínuo</h4><p>Acompanhamento, manutenção e evolução depois da entrega.</p></div>
+      <div class="st rv"><b>01</b><h4>Você envia o básico</h4><p>Nome da empresa, logo e informações de contato para começar.</p></div>
+      <div class="st rv"><b>02</b><h4>Montamos o site</h4><p>Criamos a primeira versão com rapidez, com o logo da sua empresa aplicado.</p></div>
+      <div class="st rv"><b>03</b><h4>Você pede os ajustes</h4><p>Textos, cores, imagens: as alterações que quiser, depois de ver o site pronto.</p></div>
+      <div class="st rv"><b>04</b><h4>No ar</h4><p>Hospedagem e domínio configurados, e suporte para o que vier depois.</p></div>
     </div>
   </div>
 </section>
 
-<section class="tel" id="telecom">
+<section class="infra split" id="infraestrutura">
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag">Infraestrutura</span>
+      <h2>Base técnica <span class="grad">sólida e segura</span></h2>
+      <p class="sub">Trabalhamos com sistemas em nuvem, infraestrutura e servidores Linux, do código ao servidor, para que o seu projeto rode com estabilidade.</p>
+    </div>
+    <div class="tbox rv">
+      <h3>O que mantemos no ar</h3>
+      <p>Da implantação ao acompanhamento.</p>
+      <div class="chk"><b>Sistemas em nuvem</b><span>Aplicações acessíveis de qualquer lugar</span></div>
+      <div class="chk"><b>Servidores Linux</b><span>Configuração, segurança e manutenção</span></div>
+      <div class="chk"><b>Infraestrutura</b><span>Deploy, monitoramento e backup</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tel split" id="telecom">
   <div class="wrap">
     <div class="rv">
       <span class="tag">Consultoria em Telecom</span>
@@ -252,10 +263,10 @@ footer .wrap{display:block}
     <div class="tbox rv">
       <h3>O que a consultoria entrega</h3>
       <p>Um plano claro, com recomendações práticas.</p>
-      <div class="chk"><span>Mapeamento da estrutura atual</span><span>Incluso</span></div>
-      <div class="chk"><span>Análise de operadoras e planos</span><span>Incluso</span></div>
-      <div class="chk"><span>Relatório com recomendações</span><span>Incluso</span></div>
-      <div class="chk"><span>Apoio na implantação</span><span>Incluso</span></div>
+      <div class="chk"><b>Mapeamento da estrutura atual</b><span>Incluso</span></div>
+      <div class="chk"><b>Análise de operadoras e planos</b><span>Incluso</span></div>
+      <div class="chk"><b>Relatório com recomendações</b><span>Incluso</span></div>
+      <div class="chk"><b>Apoio na implantação</b><span>Incluso</span></div>
     </div>
   </div>
 </section>
@@ -288,7 +299,7 @@ footer .wrap{display:block}
     <div class="ccard rv">
       <h3>Atendimento via WhatsApp</h3>
       <p>Canal direto com a Routersync Tecnologia.</p>
-      <a class="btn btn-wa" href="https://wa.me/5524992697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20e%20gostaria%20de%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>(24) 99969-7837</a>
+      <a class="btn btn-wa" href="https://wa.me/5524999697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20e%20gostaria%20de%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>(24) 99969-7837</a>
       <div class="info">
         <div><span>Localização</span><b>Paraty – RJ</b></div>
         <div><span>Atendimento</span><b>Presencial e remoto</b></div>
@@ -298,7 +309,7 @@ footer .wrap{display:block}
   </div>
 </section>
 
-<footer style="border-top: 1px solid rgba(255,255,255,.08); padding: 36px 0; color: #8e9bb5; font-size: .87rem; font-family: Inter, system-ui, sans-serif; box-sizing: border-box;">
+<footer style="background: #0b1220; border-top: 1px solid rgba(255,255,255,.08); padding: 36px 0; color: #8e9bb5; font-size: .87rem; font-family: Inter, system-ui, sans-serif; box-sizing: border-box;">
   <style>
     .rs-ft * { box-sizing: border-box; }
     .rs-ft .rs-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
@@ -330,7 +341,7 @@ footer .wrap{display:block}
   </script>
 </footer>
 
-<a class="fab" href="https://wa.me/5524992697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20Tecnologia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico"><use href="#wa"/></svg></a>
+<a class="fab" href="https://wa.me/5524999697837?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Routersync%20Tecnologia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico"><use href="#wa"/></svg></a>
 
 <script>
 const hd = document.getElementById('hd'), menu = document.getElementById('menu');
