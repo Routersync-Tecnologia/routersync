@@ -1,11 +1,11 @@
 #!/bin/bash
 
 VERSION=1
-MINOR=0
+MINOR=1
 PATCH=0
 EXTRAVERSION=""
 
-NOTES="Versão inicial Completa"
+NOTES="Melhorias de layout design e valores"
 BRANCH="main"
 
 set -e
